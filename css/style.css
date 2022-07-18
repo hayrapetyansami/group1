@@ -1,0 +1,44 @@
+.radius {
+	width: 250px;
+	height: 250px;
+	background: linear-gradient(green, yellow);
+	border-radius: 0px 60% 0px 60%;
+	margin-bottom: 15px;
+}
+
+button {
+	background: #000;
+	border: none;
+	color: #fff;
+	border-radius: 5px;
+	padding: 8px 45px;
+	cursor: pointer;
+	margin-bottom: 15px;
+}
+
+.flag {
+	width: 150px;
+	height:40px;
+}
+.flag.red {
+	background: #f00;
+}
+.flag.blue {
+	background: #00f;
+}
+.flag.orange {
+	background: #ff8800;
+}
+.wrapper {
+	display: flex;
+	width: 300px;
+	justify-content: space-between;
+	margin-top: 80px;
+	gap: 8px;
+}
+.wrapper .box {
+	width: 100px;
+	height: 100px;
+	background: rgb(61, 55, 55);
+	cursor: pointer;
+}
