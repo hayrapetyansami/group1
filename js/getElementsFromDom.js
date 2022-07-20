@@ -2,8 +2,8 @@
 // DOM => Document Object Model
 // BOM => Browser Object Model > window
 
-const limeID = document.getElementById("radius");
-const limeClass = document.getElementsByClassName("radius");
+const limeID = document.getElementById("lime");
+const limeClass = document.getElementsByClassName("lime");
 const btnsVat = document.getElementsByTagName("button");
 const paragraph = document.getElementsByName("a")[0];
 const flagsOld = document.getElementsByClassName("flag");
@@ -14,7 +14,7 @@ const flagsOld = document.getElementsByClassName("flag");
 // console.log(paragraph);
 
 const flags = document.querySelectorAll(".flag");
-const lime = document.querySelector("#radius");
+const lime = document.querySelector("#lime");
 const btns = document.querySelectorAll("button");
 const boxes = document.querySelectorAll(".wrapper > .box")
 const chgitem = document.querySelector("[data-chgitem]");

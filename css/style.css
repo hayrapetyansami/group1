@@ -1,7 +1,7 @@
-.radius {
+.lime {
 	width: 250px;
 	height: 250px;
-	background: linear-gradient(green, yellow);
+	background: linear-gradient( green,lime, yellow);
 	border-radius: 0px 60% 0px 60%;
 	margin-bottom: 15px;
 }
