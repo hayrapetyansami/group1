@@ -1,0 +1,32 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: 0;
+	list-style-position: inside;
+}
+
+body {
+	padding: 55px;
+}
+
+.first, .second, .third {
+	margin-bottom: 30px;
+}
+
+button {
+	padding: 15px 45px;
+	background: #f28866;
+	border: none;
+	cursor: pointer;
+}
+
+button#current {
+	border-radius: 50%;;
+}
+
+li[data-current] {
+	color: red;
+	font-weight: bold;
+	font-size: 35px;
+}
