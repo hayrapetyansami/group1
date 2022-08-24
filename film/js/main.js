@@ -2,6 +2,8 @@
 const headerImage = document.querySelector("header img");
 const filmsBlock = document.querySelector("#films");
 const form = document.querySelector("#add");
+const signInBtn = document.querySelector("[data-in]");
+const signInModal = document.querySelector("[data-in-modal]");
 
 function init () {
 	headerImage.src = "img/bg2.jpg";

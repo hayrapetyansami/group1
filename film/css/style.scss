@@ -229,3 +229,49 @@ main {
 		}
 	}
 }
+
+// modal
+.modal_wrapper {
+	display: none;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 55;
+	background: rgba(0, 0, 0, 0.7);
+
+	&.modal_wrapper-active {
+		display: flex;
+	}
+
+	form {
+		padding: 30px;
+		background: #fff;
+		border-radius: $br;
+
+		input {
+			display: block;
+			width: 100%;
+			min-width: 280px;
+			padding: 10px;
+			margin-bottom: 5px;
+			border: 1px solid #ccc;
+			cursor: pointer;
+			border-radius: $br;
+		}
+
+		button {
+			display: block;
+			margin-top: 15px;
+			padding: 8px 35px;
+			border: none;
+			background: green;
+			color: #fff;
+			border-radius: $br;
+			cursor: pointer;
+		}
+	}
+}
