@@ -4,6 +4,8 @@ const filmsBlock = document.querySelector("#films");
 const form = document.querySelector("#add");
 const signInBtn = document.querySelector("[data-in]");
 const signInModal = document.querySelector("[data-in-modal]");
+const tabBtns = document.querySelectorAll(".tab_btn");
+const tabBodys = document.querySelectorAll(".tab_body");
 
 function init () {
 	headerImage.src = "img/bg2.jpg";
@@ -74,9 +76,35 @@ signInBtn.addEventListener("click", (e) => {
 	e.preventDefault();
 	signInModal.classList.add("modal_wrapper-active");
 });
-
 signInModal.addEventListener("mousedown", (e) => {
 	if (e.target && !e.target.matches("form, input, h2, button")) {
 		signInModal.classList.remove("modal_wrapper-active");
 	}
 });
+
+tabBtns[0].classList.add("tab_btn-active");
+tabBodys[0].classList.add("tab_body-active");
+
+// tabBtns.forEach((btn, index) => {
+// 	btn.addEventListener("click", () => {
+// 		tabBtns.forEach((item, i) => {
+// 			item.classList.remove("tab_btn-active");
+// 			tabBodys[i].classList.remove("tab_body-active")
+// 		});
+
+// 		btn.classList.add("tab_btn-active");
+// 		tabBodys[index].classList.add("tab_body-active");
+// 	});
+// });
+
+for (let i = 0; i < tabBtns.length; i++) {
+	tabBtns[i].addEventListener("click", () => {
+		for (let x = 0; x < tabBtns.length; x++) {
+			tabBtns[x].classList.remove("tab_btn-active");
+			tabBodys[x].classList.remove("tab_body-active");
+		}
+
+		tabBtns[i].classList.add("tab_btn-active");
+		tabBodys[i].classList.add("tab_body-active");
+	});
+}
