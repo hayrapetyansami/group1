@@ -210,6 +210,11 @@ main .container #main_promo .mp img {
   background: #fff;
   border-radius: 8px;
 }
+.modal_wrapper form h2 {
+  margin-bottom: 15px;
+  color: #555;
+  letter-spacing: 2px;
+}
 .modal_wrapper form input {
   display: block;
   width: 100%;

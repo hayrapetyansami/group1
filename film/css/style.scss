@@ -252,6 +252,12 @@ main {
 		background: #fff;
 		border-radius: $br;
 
+		h2 {
+			margin-bottom: 15px;
+			color: #555;
+			letter-spacing: 2px;
+		}
+
 		input {
 			display: block;
 			width: 100%;

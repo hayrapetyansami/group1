@@ -25,7 +25,6 @@ const _DB = {
 		"The Deer Hunter", "Rocky", "Crid"
 	]
 };
-
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
 	let val = e.target.firstElementChild.value.trim();
@@ -42,7 +41,6 @@ form.addEventListener("submit", (e) => {
 	createFilmsList(_DB.movies, filmsBlock);
 	e.target.reset();
 });
-
 function setSort (arr) {
 	arr.sort();
 }
@@ -70,5 +68,15 @@ function removeFilmFromList(selector) {
 		});
 	});
 }
-
 createFilmsList(_DB.movies, filmsBlock);
+
+signInBtn.addEventListener("click", (e) => {
+	e.preventDefault();
+	signInModal.classList.add("modal_wrapper-active");
+});
+
+signInModal.addEventListener("mousedown", (e) => {
+	if (e.target && !e.target.matches("form, input, h2, button")) {
+		signInModal.classList.remove("modal_wrapper-active");
+	}
+});
