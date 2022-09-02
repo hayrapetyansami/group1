@@ -1,0 +1,24 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
+}
+
+#box {
+	width: 400px;
+	height: 400px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	/* overflow: hidden; */
+	margin: 40px auto;
+	padding: 20px;
+	outline: 10px solid #000;
+	border: 1px solid #f00;
+}
+
+#btn {
+	display: block;
+	margin: 40px auto;
+	padding: 10px 25px;
+	cursor: pointer;
+}
