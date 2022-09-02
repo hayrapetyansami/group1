@@ -1,54 +1,56 @@
 "use strict";
 
-function finishDateSettings(endtime) {
-	const t = Date.parse(endtime) - Date.parse(new Date());
-	const days = Math.floor( ( t / (1000 * 60 * 60 * 24) ) );
-	const seconds = Math.floor( (t / 1000) % 60 );
-	const minutes = Math.floor( (t / 1000 / 60) % 60);
-	const hours = Math.floor( (t / (1000 * 60 * 60) % 24) );
+function countDownLogic(endtime) {
+	const total = Date.parse(endtime) - Date.parse(new Date());
+	const days = Math.floor( total / (1000 * 60 * 60 * 24) );
+	const seconds = Math.floor( (total / 1000) % 60 );
+	const minutes = Math.floor( (total / 1000 / 60) % 60);
+	const hours = Math.floor( (total / (1000 * 60 * 60)) % 24 );
 
 	return {
-		"total" : t,
+		"total" : total,
 		"days" : days,
 		"hours" : hours,
 		"minutes" : minutes,
-		"seconds" : seconds,
+		"seconds" : seconds
 	};
 }
 
-function isSetZero (num) {
-	return num >= 0 && num < 10 ? `0${num}` : num;
+function countDownIsNeedZero (n) {
+	return n >= 0 && n < 10 ? `0${n}` : n;
 }
 
-function app (parentChild, endtime) {
-	const root = document.querySelector("#timer");
-	const appInterval = setInterval(updateCreateAppHTML, 1000);
+function countDownCreateHTML (elementType, day, hour, minute, second) {
+	const parent = document.querySelector("#count-down-app");
+	parent.innerHTML = `
+		<${elementType}>${day < 0 ? "00 " + " : " : day + " : "}</${elementType}>
+		<${elementType}>${hour < 0 ? "00" + " : " : hour + " : "}</${elementType}>
+		<${elementType}>${minute < 0 ? "00" + " : " : minute + " : "}</${elementType}>
+		<${elementType}>${second < 0 ? "00" : second}</${elementType}>
+	`;
 
-	updateCreateAppHTML();
-	createAppHTML();
+	return elementType;
+}
 
-	function createAppHTML (day = 0, hour = 0, minute = 0, second = 0) {
-		root.innerHTML = `
-			<!-- <${parentChild}>${day}</${parentChild}> -->
-			<${parentChild}>${hour}</${parentChild}>
-			<${parentChild}>${minute}</${parentChild}>
-			<${parentChild}>${second}</${parentChild}>
-		`;
-	}
-
-	function updateCreateAppHTML() {
-		const finishDateSettingsData = finishDateSettings(endtime);
-		createAppHTML(
-			isSetZero(finishDateSettingsData.days),
-			isSetZero(finishDateSettingsData.hours),
-			isSetZero(finishDateSettingsData.minutes),
-			isSetZero(finishDateSettingsData.seconds)
+function countDownUpdate (elementType, endtime) {
+	const timer = setInterval(() => {
+		const data = countDownLogic(endtime);
+		countDownCreateHTML(
+			elementType,
+			countDownIsNeedZero(data.days),
+			countDownIsNeedZero(data.hours),
+			countDownIsNeedZero(data.minutes),
+			countDownIsNeedZero(data.seconds)
 		);
 
-		if (finishDateSettingsData.total <= 0) {
-			clearInterval(appInterval);
+		if (data.total <= 0) {
+			clearInterval(timer);
 		}
-	}
+	}, 1000);
 }
 
-app("span", "2022-09-01");
+function countDownAppInit (elementType, endtime) {
+	countDownUpdate(elementType, endtime);
+}
+
+countDownAppInit("span", "2022-09-03");
