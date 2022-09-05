@@ -1,0 +1,46 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 300vh;
+}
+
+#text_container {
+	max-width: 600px;
+	margin: 40px auto;
+}
+
+#text_container p {
+	height: 550px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	margin-bottom: 40px;
+}
+
+#text_container button {
+	padding: 8px 25px;
+	background: green;
+	color: #fff;
+	cursor: pointer;
+	border: none;
+}
+
+#text_container p span {
+	color: red
+}
+
+#top {
+	display: none;
+	width: fit-content;
+	font-size: 30px;
+	background-color: #00f;
+	cursor: pointer;
+	color: #fff;
+	padding: 10px 15px;
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+}
