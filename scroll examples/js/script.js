@@ -38,17 +38,22 @@ bottomBtn.addEventListener("click", () => {
 	span.scrollIntoView({block: "start", behavior: "smooth"});
 });
 
-document.addEventListener("scroll", () => {
-	console.log(document.documentElement.scrollTop);
-	if (document.documentElement.scrollTop >= 600) {
+window.addEventListener("scroll", () => {
+	console.log(window.scrollY);
+	if (window.scrollY >= 500) {
 		topElem.style.display = "block";
 		topElem.addEventListener("click", () => {
 			document.documentElement.scrollIntoView({
 				block: "start",
 				behavior: "smooth"
-			})
+			});
 		});
 	} else {
 		topElem.removeAttribute("style")
 	}
-})
+});
+
+/*
+	elem.scrollX = READ ONLY
+	elem.scrollY = READ ONLY
+*/
