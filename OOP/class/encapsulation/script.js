@@ -38,34 +38,26 @@ console.log(john);
 class User {
 	constructor (email, password) {
 		this.email = email;
-		this._password = password;
+		// this._password = password;
 	}
 
-	// #password = "test123"; // private filed
+	#password = "alex#777"; // private filed
 
 	say() {
 		// console.log(`email: ${this.email} password: ${this.password}`);
-		console.log(`email: ${this.email}, password: ${this._password}`);
+		console.log(`email: ${this.email}, password: ${this.#password}`);
 	}
 
 	get pass() {
-		return `GET private filed: ${this.#password}`;
+		return this.#password;
 	}
 
-	set pass(pass) {
-		this.#password = pass;
+	set pass(a) {
+		this.#password = a;
 	}
-
-	// static rememberState = []
 }
 
-// const sami = new User("sami@hsrocket.com");
-// // sami.#password = "admin123"; // error
-
-// console.log(sami.pass); // get
-// sami.pass = "admin123"; // set
-// console.log(sami.pass); // get
-
-// sami.say()
-
-console.log(User.rememberState());
+const alex = new User("alex@rambler.ru");
+console.log(alex.pass); // get
+alex.pass = "test"; // set
+console.log(alex.pass); // get
