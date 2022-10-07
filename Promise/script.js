@@ -52,5 +52,5 @@ const test = time => {
 // 	console.log("Բոլորը աշխատեցին");
 // });
 
-Promise.race([test(10), test(4000), test(6000, test(10000))])
-.then(() => console.log("Race is working..."));
+// Promise.race([test(10), test(4000), test(6000, test(10000))])
+// .then(() => console.log("Race is working..."));
