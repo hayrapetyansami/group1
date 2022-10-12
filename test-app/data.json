@@ -1,0 +1,42 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "brand": "Xiaomi",
+      "model": "Note 8T",
+      "storage": "128GB",
+      "price": "300 $",
+      "colors": [
+        "Blue",
+        "White",
+        "Gray",
+        "Black"
+      ]
+    },
+    {
+      "id": 2,
+      "brand": "Google",
+      "model": "Pixel 7",
+      "storage": "512GB",
+      "price": "1087 $",
+      "colors": [
+        "Black",
+        "Rose",
+        "Purple"
+      ]
+    },
+    {
+      "id": 3,
+      "brand": "Samsung",
+      "model": "S21 ultra",
+      "storage": "256GB",
+      "price": "1244 $",
+      "colors": [
+        "White",
+        "Black",
+        "Blue",
+        "Gray"
+      ]
+    }
+  ]
+}
