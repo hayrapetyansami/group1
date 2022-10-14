@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "name": "Learn JavaScript",
+      "id": 1
+    },
+    {
+      "name": "Learn TypeScript",
+      "id": 2
+    },
+    {
+      "name": "Learn Vue/Vuex/Nuxt",
+      "id": 3
+    },
+    {
+      "name": "learn SQL",
+      "id": 4
+    },
+    {
+      "name": "learn MySQL, PostgreSQL, MongoDB e.t.c",
+      "id": 5
+    }
+  ]
+}

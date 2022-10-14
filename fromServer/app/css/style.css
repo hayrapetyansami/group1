@@ -1,0 +1,57 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: 0;
+}
+
+body {
+	padding: 30px;
+	font-family: Arial;
+	background: #ddd;
+}
+
+#root {
+	padding: 30px;
+	background: #fff;
+	border-radius: 6px;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+#screenBlock {
+	display: flex;
+	margin-bottom: 24px;
+}
+#screenBlock input {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 6px 0px 0px 6px;
+	width: 100%;
+}
+
+#screenBlock #screenAddBtn {
+	background: #1a91d2;
+	border-radius: 0px;
+	padding: 0px 8px;
+	cursor: pointer;
+	color: #fff;
+	border: none;
+}
+
+#listsBlock .listsBlock__item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 12px;
+}
+
+
+#listsBlock .listsBlock__item button {
+	padding: 8px 12px;
+	cursor: pointer;
+	border: none;
+	background: #f00900;
+	color: #fff;
+	border-radius: 6px;
+}
