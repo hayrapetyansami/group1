@@ -1,24 +1,20 @@
 {
   "todos": [
     {
-      "name": "Learn JavaScript",
+      "title": "Learn JavaScript",
       "id": 1
     },
     {
-      "name": "Learn TypeScript",
+      "title": "Learn TypeScript",
       "id": 2
     },
     {
-      "name": "Learn Vue/Vuex/Nuxt",
+      "title": "Learn Vue.js",
       "id": 3
     },
     {
-      "name": "learn SQL",
+      "title": "Learn Node.js",
       "id": 4
-    },
-    {
-      "name": "learn MySQL, PostgreSQL, MongoDB e.t.c",
-      "id": 5
     }
   ]
 }
