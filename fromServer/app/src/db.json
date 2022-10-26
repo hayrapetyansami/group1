@@ -1,0 +1,14 @@
+{
+  "todos": [
+    {
+      "title": "Learn JavaScript",
+      "isComplete": true,
+      "id": 1
+    },
+    {
+      "title": "Learn TypeScript",
+      "isComplete": false,
+      "id": 2
+    }
+  ]
+}
