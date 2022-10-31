@@ -1,4 +1,4 @@
-module.exports = function (form, input, url) {
+module.exports = async function (form, input, url) {
 	form.addEventListener("submit", async (e) => {
 		e.preventDefault();
 

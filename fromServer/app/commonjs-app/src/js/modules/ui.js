@@ -9,7 +9,7 @@ module.exports = {
 
 	elementOptions() {
 		this.title.textContent = "CRUD";
-		this.subTitle.textContent = "Asyn Application"
+		this.subTitle.textContent = "Asyn Application";
 
 		this.form.id = "app-form";
 		this.screenBlock.id = "screenBlock";

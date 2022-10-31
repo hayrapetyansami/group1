@@ -8,7 +8,6 @@ module.exports = function (editBtnArray, saveBtnArray, content, url) {
 			input.classList.add("edit");
 			input.removeAttribute("readonly");
 			
-
 			saveBtnArray[index].addEventListener("click", async () => {
 				await fetch(`${url}/${fakeID}`, {
 					method: "PUT",
@@ -17,7 +16,7 @@ module.exports = function (editBtnArray, saveBtnArray, content, url) {
 					},
 					body: JSON.stringify({title: input.value.trim(), isComplete: false})
 				})
-			})
+			});
 		});
 	});
-}
+};
