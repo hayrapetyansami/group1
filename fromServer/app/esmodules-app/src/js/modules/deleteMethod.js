@@ -1,4 +1,4 @@
-export default function (removeBtn, url) {
+export default async function (removeBtn, url) {
 	removeBtn.forEach(btn => {
 		btn.addEventListener("click", async () => {
 			const fakeID = btn.parentElement.previousElementSibling.firstElementChild.textContent;
@@ -7,6 +7,6 @@ export default function (removeBtn, url) {
 			await fetch(`${url}/${parseInt(fakeID)}`, {
 				method: "DELETE"
 			});
-		})
+		});
 	});
-}
+};

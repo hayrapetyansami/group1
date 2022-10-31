@@ -1,4 +1,6 @@
-export default function (btnArray, url, UI) {
+import SELECT from "./select";
+
+export default async function (btnArray, url, UI, PATCH, DELETE, COMPLETE) {
 	btnArray.forEach(btn => {
 		btn.addEventListener("click", async () => {
 			let filterUrl;
@@ -12,9 +14,10 @@ export default function (btnArray, url, UI) {
 				filterUrl = url;
 			}
 
-			await fetch (filterUrl)
-			.then(data => data.json())
-			.then(data => data.forEach(obj => UI.toHTML(obj.id, obj.title, obj.isComplete)));
+			await fetch(filterUrl)
+				.then(data => data.json())
+				.then(data => data.forEach(obj => UI.toHTML(obj.id, obj.title, obj.isComplete)))
+				.then(() => SELECT(PATCH, DELETE, COMPLETE, url));
 		});
 	});
-}
+};

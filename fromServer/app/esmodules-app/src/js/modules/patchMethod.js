@@ -1,4 +1,4 @@
-export default function (editBtnArray, saveBtnArray, content, url) {
+export default async function (editBtnArray, saveBtnArray, content, url) {
 	editBtnArray.forEach((editBtn, index) => {
 		editBtn.addEventListener("click", () => {
 			editBtn.style.display = "none";
@@ -8,16 +8,15 @@ export default function (editBtnArray, saveBtnArray, content, url) {
 			input.classList.add("edit");
 			input.removeAttribute("readonly");
 			
-
 			saveBtnArray[index].addEventListener("click", async () => {
 				await fetch(`${url}/${fakeID}`, {
 					method: "PATCH",
 					headers: {
-						"content-type" : "application/json"
+						"content-type": "application/json"
 					},
-					body: JSON.stringify({title: input.value.trim()})
-				})
-			})
+					body: JSON.stringify({ title: input.value.trim() })
+				});
+			});
 		});
 	});
-}
+};

@@ -13,7 +13,7 @@ export default {
 
 	elementOptions() {
 		this.title.textContent = "CRUD";
-		this.subTitle.textContent = "Asyn Application"
+		this.subTitle.textContent = "Asyn Application";
 
 		this.form.id = "app-form";
 		this.screenBlock.id = "screenBlock";
@@ -37,7 +37,7 @@ export default {
 		root.append(this.title, this.subTitle, this.form, this.listsBlock, this.filterWrapper);
 		this.form.append(this.screenBlock);
 		this.screenBlock.append(this.screenInput, this.screenAddBtn);
-		this.filterWrapper.append(this.filterComplete, this.filterUnComplete, this.filterAll)
+		this.filterWrapper.append(this.filterComplete, this.filterUnComplete, this.filterAll);
 	},
 
 	toHTML(id, value, state = false) {
