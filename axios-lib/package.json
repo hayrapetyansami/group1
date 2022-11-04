@@ -1,0 +1,14 @@
+{
+  "name": "axios-lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "server" : "json-server data.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "json-server": "^0.17.1"
+  }
+}
